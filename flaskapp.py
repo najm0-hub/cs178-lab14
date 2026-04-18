@@ -45,6 +45,20 @@ def display_html(rows):
     html += "</table>"
     return html
 
+
+
+# ---------------------------------------------------------------------------
+# Routes
+# ---------------------------------------------------------------------------
+
+@app.route("/")
+def index():
+    return "<h1>Lab 14 Flask App</h1><p>Your routes go below this one.</p>"
+
+
+# TODO: Section 1 — add your dbTesting code to dbTesting.py (not here)
+
+# TODO: Section 2 — add your /viewdb route here
 @app.route("/viewdb")
 def viewdb():
     """
@@ -60,19 +74,6 @@ def viewdb():
         LIMIT 20
     """)
     return display_html(rows)
-
-# ---------------------------------------------------------------------------
-# Routes
-# ---------------------------------------------------------------------------
-
-@app.route("/")
-def index():
-    return "<h1>Lab 14 Flask App</h1><p>Your routes go below this one.</p>"
-
-
-# TODO: Section 1 — add your dbTesting code to dbTesting.py (not here)
-
-# TODO: Section 2 — add your /viewdb route here
 
 # TODO: Section 2 — add your /artistquery/<artist_id> route here
 
